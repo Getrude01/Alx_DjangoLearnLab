@@ -1,0 +1,221 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Content styling */
+.content {
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 25px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Blog headings */
+.content h1,
+.content h2,
+.content h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.content a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px 10px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Professional spacing */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Optional responsive tweaks */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .content {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+/* Blog post list styling */
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #222;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Links at the top */
+.content a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Post items as cards */
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Post title link */
+.content ul li a:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Action links (Edit / Delete) */
+.content ul li .actions a {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content ul li .actions a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Create new post links at top */
+.content .create-links {
+    margin-bottom: 20px;
+}
+
+.content .create-links a {
+    font-weight: 500;
+    padding: 7px 12px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.content .create-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .content ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content ul li .actions {
+        margin-top: 10px;
+    }
+}

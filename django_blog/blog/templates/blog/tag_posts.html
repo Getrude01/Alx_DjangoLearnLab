@@ -1,0 +1,8 @@
+<h2>Posts tagged with "{{ tag_name }}"</h2>
+{% for post in posts %}
+    <div>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </div>
+{% empty %}
+    <p>No posts found for this tag.</p>
+{% endfor %}

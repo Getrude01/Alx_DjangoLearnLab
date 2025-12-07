@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h1>All Blog Posts</h1>
+
+<div class="create-links">
+    <a href="{% url 'blog:post_create' %}">Create New Post</a>
+    <a href="#">Create New Post (Alt URL)</a>
+</div>
+
+
+<ul>
+  {% for post in object_list %}
+    <li>
+      <a href="{% url 'blog:post_detail' post.pk %}">{{ post.title }}</a> |
+      <a href="{% url 'blog:post_detail_alt' post.pk %}">(Alt URL)</a>
+      {% if user == post.author %}
+      <div class="actions">
+        <br>
+        <a href="{% url 'blog:post_update' post.pk %}">Edit</a> |
+        <a href="{% url 'blog:post_update_alt' post.pk %}">(Alt URL)</a> |
+        <a href="{% url 'blog:post_delete' post.pk %}">Delete</a> |
+        <a href="{% url 'blog:post_delete_alt' post.pk %}">(Alt URL)</a>
+      {% endif %}
+       </div>
+    </li>
+  {% empty %}
+    <li>No posts yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
