@@ -10,7 +10,7 @@ from .views import (
     CommentCreateView,
     CommentUpdateView,
     CommentDeleteView,
-    
+    PostByTagListView,  # <- add this
 )
 
 app_name = "blog"
@@ -25,6 +25,8 @@ urlpatterns = [
     # Search
     path('search/', views.search_posts, name='search_posts'),
 
+    # Tags
+    path('tags/<slug:tag_slug>/', PostByTagListView.as_view(), name='posts_by_tag'),
 
     # Blog posts CRUD (posts/ style)
     path("posts/", PostListView.as_view(), name="post_list"),
