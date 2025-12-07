@@ -50,7 +50,7 @@ def query_librarian_for_library(library_name):
         print("No librarian assigned to this library.")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     query_books_by_author("Chinua Achebe")
     print()
     query_books_in_library("Central Library")
